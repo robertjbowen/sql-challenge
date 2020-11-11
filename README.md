@@ -12,6 +12,7 @@ Query Design - Simple join of the employees and salaries tables based on employe
 SELECT employees.emp_no, employees.last_name, employees.first_name, employees.sex, salaries.salary
 FROM employees
 INNER JOIN salaries ON employees.emp_no = salaries.emp_no;
+
 ![alt tag](https://github.com/robertjbowen/sql-challenge/blob/main/images/Query1.png)
 ***
 ### -- Query #2
@@ -22,6 +23,7 @@ Query Design - Simple filter of the employee table by the hire_date column using
 SELECT first_name, last_name, hire_date
 FROM employees
 WHERE hire_date BETWEEN '1986-01-01' AND '1986-12-31';  
+
 ![alt tag](https://github.com/robertjbowen/sql-challenge/blob/main/images/Query2.png)
 ***
 ### -- Query #3
@@ -32,6 +34,7 @@ SELECT departments.dept_no, departments.dept_name, dept_manager.emp_no, employee
 FROM departments
 INNER JOIN dept_manager ON departments.dept_no = dept_manager.dept_no
 INNER JOIN employees ON dept_manager.emp_no = employees.emp_no;
+
 ![alt tag](https://github.com/robertjbowen/sql-challenge/blob/main/images/Query3.png)
 ***
 ### -- Query #4
@@ -42,6 +45,7 @@ SELECT employees.emp_no, employees.last_name, employees.first_name, departments.
 FROM employees
 INNER JOIN dept_emp ON employees.emp_no = dept_emp.emp_no
 INNER JOIN departments ON dept_emp.dept_no = departments.dept_no;
+
 ![alt tag](https://github.com/robertjbowen/sql-challenge/blob/main/images/Query4.png)
 ***
 ### -- Query #5
@@ -52,6 +56,7 @@ SELECT first_name, last_name, sex
 FROM employees
 WHERE first_name = 'Hercules'
 AND last_name like 'B%';
+
 ![alt tag](https://github.com/robertjbowen/sql-challenge/blob/main/images/Query5.png)
 ***
 ### -- Query #6
@@ -63,6 +68,7 @@ FROM employees
 INNER JOIN dept_emp ON employees.emp_no = dept_emp.emp_no
 INNER JOIN departments ON dept_emp.dept_no = departments.dept_no
 WHERE dept_name = 'Sales';
+
 ![alt tag](https://github.com/robertjbowen/sql-challenge/blob/main/images/Query6.png)
 ***
 ### -- Query #7
@@ -75,6 +81,7 @@ INNER JOIN dept_emp ON employees.emp_no = dept_emp.emp_no
 INNER JOIN departments ON dept_emp.dept_no = departments.dept_no
 WHERE dept_name = 'Sales'
 OR dept_name = 'Development';
+
 ![alt tag](https://github.com/robertjbowen/sql-challenge/blob/main/images/Query7.png)
 ***
 ### -- Query #8
@@ -85,9 +92,11 @@ SELECT last_name, COUNT(last_name) AS name_count
 FROM employees
 GROUP BY last_name
 ORDER BY "name_count" DESC;
+
 ![alt tag](https://github.com/robertjbowen/sql-challenge/blob/main/images/Query8.png)
 ***
 ### Epilogue
 
 Question - Search Your ID Number = 499942
+
 ![alt tag](https://github.com/robertjbowen/sql-challenge/blob/main/images/Query99.png)
