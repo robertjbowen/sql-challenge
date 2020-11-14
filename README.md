@@ -11,11 +11,12 @@ Question - List the following details of each employee: employee number, last na
 
 Query Design - Simple join of the employees and salaries tables based on employee id numbers.
 
-SELECT employees.emp_no, employees.last_name, employees.first_name, employees.sex, salaries.salary
 
-FROM employees
+  SELECT employees.emp_no, employees.last_name, employees.first_name, employees.sex, salaries.salary
 
-INNER JOIN salaries ON employees.emp_no = salaries.emp_no;
+  FROM employees
+
+  INNER JOIN salaries ON employees.emp_no = salaries.emp_no;
 
 ![alt tag](https://github.com/robertjbowen/sql-challenge/blob/main/images/Query1.png)
 ***
