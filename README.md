@@ -2,11 +2,12 @@
 
 The purpose of this challenge is to create a database, design tables to hold data, import the data from CSV files into the database, design an ERD of the tables, and design sql queries to answer questions about the data.
 
+### Entity Relationship Diagram
 ![alt tag](https://github.com/robertjbowen/sql-challenge/blob/main/images/ERD.png)
 
 ## -- Data Analysis
 ### -- Query #1
-Question - List the following details of each employee: employee number, last name, first name, sex, and salary.
+Question - List the following details of each employee: employee number, last name, first name, sex, and salary. /n
 Query Design - Simple join of the employees and salaries tables based on employee id numbers.
 
 SELECT employees.emp_no, employees.last_name, employees.first_name, employees.sex, salaries.salary
