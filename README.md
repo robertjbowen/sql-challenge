@@ -148,6 +148,8 @@ ORDER BY "name_count" DESC;
 
 This portion of the challenge involved importing the database created during the data engineering portion of the project. Three tables salaries, employees, and titles were imported and merged based on emp_no and title_id/emp_title to create a combined_data dataframe. The salary data was cleaned to remove the "$" and "," symbols from the data string and then converted to a float type for analysis. 
 
+The python script for creating the merge and the plots is in the sql_bonus.ipynb file.
+
 1. The salary data was plotted in a histogram showing counts in $10,000 increments from $40,000 to $130,000. 
 
 ![alt tag](https://github.com/robertjbowen/sql-challenge/blob/main/images/bonus_salary.png)
