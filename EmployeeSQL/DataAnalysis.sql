@@ -2,8 +2,7 @@
 -- Query #1
 SELECT employees.emp_no, employees.last_name, employees.first_name, employees.sex, salaries.salary
 FROM employees
-INNER JOIN salaries ON
-employees.emp_no = salaries.emp_no;
+INNER JOIN salaries ON employees.emp_no = salaries.emp_no;
 
 -- Query #2
 SELECT first_name, last_name, hire_date
@@ -49,5 +48,6 @@ FROM employees
 GROUP BY last_name
 ORDER BY "name_count" DESC;
 
+-- Epilogue
 Select * from employees
 where emp_no = 499942;

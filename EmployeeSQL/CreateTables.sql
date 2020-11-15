@@ -44,8 +44,8 @@ CREATE TABLE salaries (
 );
 
 -- View new tables
-SELECT * FROM employees;
 SELECT * FROM titles;
+SELECT * FROM employees;
 SELECT * FROM departments;
 SELECT * FROM dept_emp;
 SELECT * FROM dept_manager;
