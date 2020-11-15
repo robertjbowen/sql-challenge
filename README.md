@@ -2,10 +2,24 @@
 
 The purpose of this challenge is to create a database, design tables to hold data, import the data from CSV files into the database, design an ERD of the tables, and design sql queries to answer questions about the data.
 
+
+## -- Data Engineering
+
+This project involved creating a database using pgAdmin4 and creating six tables within the db Schema relating to employee records, titles, salaries, and department affiliation. A Entity Relationship diagram was developed to support the design and order of creation fro the new tables.
+
 ### Entity Relationship Diagram
 ![alt tag](https://github.com/robertjbowen/sql-challenge/blob/main/images/ERD.png)
 
+
+Each table was created in order and the CSV data imported using the pgAdmin import/export tool. Once imported, the contents of each table was viewed to ensure correct import. 
+
+The SQL script for creating the tables is in the CreateTables.sql file. 
+
+***
 ## -- Data Analysis
+
+The SQL script for creating the queries is in the DataAnalysis.sql file.
+ 
 ### -- Query #1
 Question - List the following details of each employee: employee number, last name, first name, sex, and salary. 
 
@@ -128,6 +142,20 @@ GROUP BY last_name
 ORDER BY "name_count" DESC;
 
 ![alt tag](https://github.com/robertjbowen/sql-challenge/blob/main/images/Query8.png)
+
+***
+## -- Bonus
+
+This portion of the challenge involved importing the database created during the data engineering portion of the project. Three tables salaries, employees, and titles were imported and merged based on emp_no and title_id/emp_title to create a combined_data dataframe. The salary data was cleaned to remove the "$" and "," symbols from the data string and then converted to a float type for analysis. 
+
+1. The salary data was plotted in a histogram showing counts in $10,000 increments from $40,000 to $130,000. 
+
+![alt tag](https://github.com/robertjbowen/sql-challenge/blob/main/images/bonus_salary.png)
+
+2. A reduced dataframe was created with just title and salary data and grouped by title to display in a bar chart showing average salary by job title.
+
+![alt tag](https://github.com/robertjbowen/sql-challenge/blob/main/images/bonus_title.png)
+
 ***
 ### Epilogue
 
